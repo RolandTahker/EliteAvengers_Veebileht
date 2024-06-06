@@ -1,0 +1,360 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Elite Avengers</title>
+</head>
+
+<body>
+  <div class="bg-zinc-900 text-white">
+    <header class="flex justify-between items-center p-8">
+      <img src="images/website_logo_eliteavengers.webp" alt="Logo" class="h-12">
+      <div class="hidden md:flex space-x-5">
+        <a href="Avaleht.html" class="hover:text-zinc-400">Home</a>
+        <a href="#" class="hover:text-zinc-400" onclick="scrollToRoster()">Roster</a>
+        <a href="#" class="hover:text-zinc-400" onclick="scrollToGames()">Games</a>
+        <a href="#" class="hover:text-zinc-400" onclick="scrollToMatches()">Matches</a>
+        <a href="#" class="hover:text-zinc-400" onclick="scrollToProducts()">Products</a>
+        <a href="contact.html" class="hover:text-zinc-400">Contact</a>
+      </div>
+      <div class="hidden md:flex space-x-5">
+        <a href="signup.html" class="hover:text-zinc-400">Sign up</a>
+        <a href="login.html" class="hover:text-zinc-400">Sign in</a>
+      </div>
+      <button
+        class="md:hidden flex items-center px-3 py-2 border rounded text-zinc-200 border-zinc-400 hover:text-white hover:border-white"
+        onclick="toggleMenu()">
+        <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <title>Menu</title>
+          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
+        </svg>
+      </button>
+    </header>
+    <nav id="mobileMenu" class="hidden md:hidden space-y-2 px-4 pb-4">
+      <a href="Avaleht.html" class="block text-zinc-200 hover:text-zinc-400">Home</a>
+      <a href="#" class="block text-zinc-200 hover:text-zinc-400" onclick="scrollToRoster()">Roster</a>
+      <a href="#" class="block text-zinc-200 hover:text-zinc-400" onclick="scrollToGames()">Games</a>
+      <a href="#" class="block text-zinc-200 hover:text-zinc-400" onclick="scrollToMatches()">Matches</a>
+      <a href="#" class="block text-zinc-200 hover:text-zinc-400" onclick="scrollToProducts()">Products</a>
+      <a href="contact.html" class="block text-zinc-200 hover:text-zinc-400">Contact</a>
+      <a href="signup.html" class="block text-zinc-200 hover:text-zinc-400">Sign up</a>
+      <a href="login.html" class="block text-zinc-200 hover:text-zinc-400">Sign in</a>
+    </nav>
+
+    <section class="flex flex-col md:flex-row items-center p-8">
+      <div class="md:w-1/2 space-y-4">
+        <h1 class="text-6xl md:text-8xl font-bold">
+          <span style="color: #757083;">‘Unleash</span> the<br>
+          <span class="text-white">Power</span> <span style="color: #757083;">Within’</span>
+        </h1>
+        <br>
+        <h2 class="text-4xl md:text-6xl font-semibold" style="color: #757083;">Elite Avengers</h2>
+        <br>
+        <p class="text-sm md:text-base">Our vision is to become a globally recognized esports team known for our
+          competitive spirit <br> and commitment to both personal and professional growth,
+          setting new standards <br> in the world of gaming.</p>
+        <br>
+        <button id="merchButton" onclick="scrollToProducts()"
+          class="bg-purple-700 text-white py-3 md:py-4 px-10 md:px-20 rounded-lg font-semibold text-lg"
+          style="background-color: #767082;">MERCH AVAILABLE NOW</button>
+      </div>
+      <img src="images/AI_WIN_ROSTER.webp" alt="Team Image" class="md:w-1/2 mt-4 md:mt-0">
+    </section>
+
+    <section id="roster" class="py-16 mb-20">
+      <h2 class="text-center text-3xl font-bold">OUR TEAM ROSTER</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12 px-6">
+        <div class="text-center">
+          <img src="images/ai_roster_1.webp" alt="Player Image" class="mx-auto w-80 rounded-lg">
+          <h3 class="mt-4 font-bold">Aiden "Vortex" Mercer</h3>
+          <p>Role: Team Captain / Strategist</p>
+        </div>
+        <div class="text-center">
+          <img src="images/ai_roster_2.webp" alt="Player Image" class="mx-auto w-80 rounded-lg">
+          <h3 class="mt-4 font-bold">Xing "Shadow" Shimei</h3>
+          <p>Role: Sniper / Rifler</p>
+        </div>
+        <div class="text-center">
+          <img src="images/ai_roster_3.webp" alt="Player Image" class="mx-auto w-80 rounded-lg">
+          <h3 class="mt-4 font-bold">Zen "Blaze" Seija</h3>
+          <p>Role: Entry Fragger</p>
+        </div>
+        <div class="text-center">
+          <img src="images/ai_roster_4.webp" alt="Player Image" class="mx-auto w-80 rounded-lg">
+          <h3 class="mt-4 font-bold">Ethan "Rogue" Bennett</h3>
+          <p>Role: Lurker / Flanker</p>
+        </div>
+        <div class="text-center">
+          <img src="images/ai_roster_5.webp" alt="Player Image" class="mx-auto w-80 rounded-lg">
+          <h3 class="mt-4 font-bold">Ryan "Specter" Hughes</h3>
+          <p>Role: Support / Utility</p>
+        </div>
+        <div class="text-center">
+          <img src="images/ai_roster_coach.webp" alt="Player Image" class="mx-auto w-80 rounded-lg">
+          <h3 class="mt-4 font-bold">Jordan "Amjon" Hayes</h3>
+          <p>Role: Coach / Analyst</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="p-6">
+      <h2 class="text-3xl font-bold text-center">COMPETING GAME LIST</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+        <div class="text-center">
+          <a href="">
+            <img src="images/COUNTERSTRIKE_COMP.webp" alt="Game Image" class="mx-auto rounded-lg game-image">
+          </a>
+          <p class="mt-4 font-bold">Counter-Strike 2</p>
+        </div>
+        <div class="text-center">
+          <a href="">
+            <img src="images/FORTNITE_COMP.webp" alt="Game Image" class="mx-auto rounded-lg game-image">
+          </a>
+          <p class="mt-4 font-bold">Fortnite</p>
+        </div>
+        <div class="text-center">
+          <a href="">
+            <img src="images/VALORANT_COMP.webp" alt="Game Image" class="mx-auto rounded-lg game-image">
+          </a>
+          <p class="mt-4 font-bold">Valorant</p>
+        </div>
+        <div class="text-center">
+          <a href="">
+            <img src="images/PUBGMOBILE_COMP.webp" alt="Game Image" class="mx-auto rounded-lg game-image">
+          </a>
+          <p class="mt-4 font-bold">PUBG Mobile</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="matches" class="bg-zinc-900 text-white py-10">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">MATCHES AND RECENT RESULTS</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16">
+          <div class="relative p-6 rounded-lg h-72">
+            <img src="images/NEXTMATCHGAME.webp" alt="Your Image"
+              class="absolute inset-0 w-full h-full object-contain rounded-lg">
+          </div>
+          <div class="relative p-6 rounded-lg h-72">
+            <img src="images/TEAMVSTEAM_MATCH.webp" alt="Your Image"
+              class="absolute inset-0 w-full h-full object-contain rounded-lg">
+          </div>
+          <div class="relative p-6 rounded-lg h-72">
+            <img src="images/TEAM_RESULTS.webp" alt="Your Image"
+              class="absolute inset-0 w-full h-full object-contain rounded-lg">
+          </div>
+        </div>
+
+        <div class="mt-8 relative">
+          <div class="slider-container relative">
+            <button id="prevButton"
+              class="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full bg-black bg-opacity-50 text-white focus:outline-none">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button id="nextButton"
+              class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-full bg-black bg-opacity-50 text-white focus:outline-none">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <img id="sliderImage" src="images/CHAMPIONS_SLIDER.webp" alt="IEM Dallas Champions"
+              class="w-full rounded-lg">
+            <div class="navigation-indicators absolute bottom-0 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              <div class="indicator bg-white w-3 h-3 rounded-full"></div>
+              <div class="indicator bg-white opacity-50 w-3 h-3 rounded-full"></div>
+              <div class="indicator bg-white opacity-50 w-3 h-3 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="p-6">
+      <h2 class="text-3xl font-bold text-center">PRODUCTS</h2>
+      <div class="mt-4" style="margin-left: 120px;">
+        <a href="products.html" class="text-lg font-semibold text-white underline hover:text-zinc-600">View All
+          Products</a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
+        <div class="text-center">
+          <a href="product1.html">
+            <img src="products/EliteAvengers_Cap_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">Elite Avengers Cap</p>
+          <p class="text-zinc-400">$15</p>
+        </div>
+        <div class="text-center">
+          <a href="product2.html">
+            <img src="products/EAvengers_Cap_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">E/Avengers Cap</p>
+          <p class="text-zinc-400">$25</p>
+        </div>
+        <div class="text-center">
+          <a href="product3.html">
+            <img src="products/EA_Cap_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">EA Cap</p>
+          <p class="text-zinc-400">$35</p>
+        </div>
+        <div class="text-center">
+          <a href="product4.html">
+            <img src="products/EA_Mouse_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">Elite Avengers Mouse</p>
+          <p class="text-zinc-400">$100</p>
+        </div>
+        <div class="text-center">
+          <a href="product5.html">
+            <img src="products/EliteAvengers_Tshirt_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">Elite Avengers T-shirt</p>
+          <p class="text-zinc-400">$45</p>
+        </div>
+        <div class="text-center">
+          <a href="product6.html">
+            <img src="products/EAvengers_Tshirt_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">E/Avengers T-shirt</p>
+          <p class="text-zinc-400">$50</p>
+        </div>
+        <div class="text-center">
+          <a href="product7.html">
+            <img src="products/EAvengers_Hoodie_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">E/Avengers Hoodie</p>
+          <p class="text-zinc-400">$75</p>
+        </div>
+        <div class="text-center">
+          <a href="product8.html">
+            <img src="products/EliteAvengers_Mousepad_Image.webp" alt="Product Image" class="mx-auto product-image">
+          </a>
+          <p class="mt-4">Elite Avengers Mousepad</p>
+          <p class="text-zinc-400">$25</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="flex justify-center mt-8 sm:mt-48 relative -top-12">
+      <div class="flex flex-col items-center sm:flex-row sm:items-center justify-between w-full max-w-4xl">
+        <img src="images/website_logo_eliteavengers.webp" alt="Elite Avengers Logo" class="h-8 mb-4 sm:mb-0 sm:mr-4">
+        <p class="text-sm mb-4 sm:mb-0">&copy; 2024 Elite Avengers. All Rights Reserved.</p>
+        <div class="flex space-x-4 mt-4 sm:mt-0">
+          <img src="images/Twitter_logo_icon.webp" alt="Twitter" class="h-5">
+          <img src="images/Facebook_logo_icon.webp" alt="Facebook" class="h-5">
+          <img src="images/Instagram_logo_icon.webp" alt="Instagram" class="h-5">
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      #games {
+        margin-top: -70px;
+      }
+
+      .navigation-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 999;
+      }
+
+      .indicator {
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .game-image {
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+
+      .game-image:hover {
+        box-shadow: 0px 20px 40px rgba(71, 64, 86, 0.9);
+        transform: scale(1.05);
+      }
+
+      .product-image {
+        transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+      }
+
+      .product-image:hover {
+        box-shadow: 0px 10px 20px rgba(71, 64, 86, 0.5);
+        transform: scale(1.05);
+      }
+
+      #merchButton {
+        margin-top: 20px;
+      }
+    </style>
+
+    <script>
+      function scrollToRoster() {
+        var section = document.getElementById('roster');
+        var yOffset = 20;
+        var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+
+      }
+
+      function scrollToGames() {
+        var section = document.getElementById('games');
+        var yOffset = -20;
+        var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+
+      }
+
+      function scrollToMatches() {
+        var section = document.getElementById('matches');
+        var yOffset = 0;
+        var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+
+      function scrollToProducts() {
+        var section = document.getElementById('products');
+        var yOffset = 20;
+        var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      }
+
+
+      const images = [
+        'images/CHAMPIONS_SLIDER.webp',
+        'images/MICE_MERCH_SLIDER.webp',
+        'images/CAP_MERCH_SLIDER.webp'
+      ];
+
+      let currentImageIndex = 0;
+
+      function changeImage() {
+        document.getElementById('sliderImage').src = images[currentImageIndex];
+        updateNavigationIndicators();
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+      }
+
+      function updateNavigationIndicators() {
+        const indicators = document.querySelectorAll('.indicator');
+        indicators.forEach(indicator => {
+          indicator.style.opacity = '0.5';
+        });
+        indicators[currentImageIndex].style.opacity = '1';
+      }
+      setInterval(changeImage, 5000);
+
+      function scrollToProducts() {
+        var section = document.getElementById('products');
+        var yOffset = 20;
+        var y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        document.getElementById('merchButton').focus();
+      }
+
+      function toggleMenu() {
+        var menu = document.getElementById('mobileMenu');
+        menu.classList.toggle('hidden');
+      }
+    </script>
+    
+</body>
+</html>
